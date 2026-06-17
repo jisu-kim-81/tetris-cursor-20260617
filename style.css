@@ -1,0 +1,158 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #1a1a2e;
+  color: #eee;
+}
+
+.game-container {
+  padding: 24px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 24px;
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+
+.game-layout {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.board-wrapper {
+  position: relative;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(10, 30px);
+  grid-template-rows: repeat(20, 30px);
+  background-color: #0f0f1a;
+  border: 3px solid #4a4a6a;
+  border-radius: 4px;
+}
+
+.game-over {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  background-color: rgba(15, 15, 26, 0.85);
+  border-radius: 4px;
+  text-align: center;
+}
+
+.game-over.hidden {
+  display: none;
+}
+
+.game-over-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #e94560;
+}
+
+.game-over-message {
+  font-size: 0.9rem;
+  color: #a0a0c0;
+}
+
+.cell {
+  width: 30px;
+  height: 30px;
+  background-color: #0f0f1a;
+  border: 1px solid #2a2a3e;
+}
+
+.piece-i { background-color: #00f0f0; }
+.piece-o { background-color: #f0f000; }
+.piece-t { background-color: #a000f0; }
+.piece-s { background-color: #00f000; }
+.piece-z { background-color: #f00000; }
+.piece-j { background-color: #0000f0; }
+.piece-l { background-color: #f0a000; }
+
+.side-panel {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.score-box,
+.controls-box {
+  background-color: #16213e;
+  border: 2px solid #4a4a6a;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.score-box h2,
+.controls-box h2 {
+  font-size: 1rem;
+  margin-bottom: 8px;
+  color: #a0a0c0;
+}
+
+.score-value {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+button {
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #e94560;
+  color: #fff;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #c73a52;
+}
+
+button:active {
+  background-color: #a83045;
+}
+
+.controls-box ul {
+  list-style: none;
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+kbd {
+  display: inline-block;
+  padding: 2px 6px;
+  background-color: #0f0f1a;
+  border: 1px solid #4a4a6a;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 0.85rem;
+}
